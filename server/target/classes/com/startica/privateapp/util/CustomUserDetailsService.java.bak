@@ -1,0 +1,6 @@
+// Duplicate bean removed to resolve ConflictingBeanDefinitionException
+// @Service
+// public class CustomUserDetailsService implements UserDetailsService {
+//     ...existing code...
+// }
+

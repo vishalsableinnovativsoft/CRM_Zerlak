@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="CopilotDiffPersistence">
+    <option name="pendingDiffs">
+      <map>
+        <entry key="$PROJECT_DIR$/src/main/java/com/startica/privateapp/multitenant/TenantIdentifierResolver.java">
+          <value>
+            <PendingDiffInfo>
+              <option name="filePath" value="$PROJECT_DIR$/src/main/java/com/startica/privateapp/multitenant/TenantIdentifierResolver.java" />
+              <option name="originalContent" value="package com.startica.privateapp.multitenant;&#10;&#10;import org.hibernate.context.spi.CurrentTenantIdentifierResolver;&#10;import org.slf4j.Logger;&#10;import org.slf4j.LoggerFactory;&#10;import org.springframework.stereotype.Component;&#10;&#10;@Component&#10;public class TenantIdentifierResolver implements CurrentTenantIdentifierResolver&lt;String&gt; {&#10;&#10;    private static final Logger log = LoggerFactory.getLogger(TenantIdentifierResolver.class);&#10;    private static final String DEFAULT_TENANT = &quot;crusher&quot;; // fallback db&#10;&#10;    @Override&#10;    public String resolveCurrentTenantIdentifier() {&#10;        String tenantId = TenantContext.getTenant(); // Fixed method name&#10;        String resolved = (tenantId != null) ? tenantId : DEFAULT_TENANT;&#10;        log.debug(&quot;[TenantIdentifierResolver] Resolved tenant: {} (raw ctx: {})&quot;, resolved, tenantId);&#10;        return resolved;&#10;    }&#10;&#10;    @Override&#10;    public boolean validateExistingCurrentSessions() {&#10;        return true;&#10;    }&#10;}&#10;" />
+              <option name="updatedContent" value="package com.startica.privateapp.multitenant;&#10;&#10;import org.hibernate.context.spi.CurrentTenantIdentifierResolver;&#10;import org.slf4j.Logger;&#10;import org.slf4j.LoggerFactory;&#10;import org.springframework.stereotype.Component;&#10;&#10;@Component&#10;public class TenantIdentifierResolver implements CurrentTenantIdentifierResolver&lt;String&gt; {&#10;&#10;    private static final Logger log = LoggerFactory.getLogger(TenantIdentifierResolver.class);&#10;    private static final String DEFAULT_TENANT = &quot;crusher&quot;; // fallback db&#10;&#10;    @Override&#10;    public String resolveCurrentTenantIdentifier() {&#10;        String tenantId = TenantContext.getTenant(); // Fixed method name&#10;        String resolved = (tenantId != null) ? tenantId : DEFAULT_TENANT;&#10;        log.debug(&quot;[TenantIdentifierResolver] Resolved tenant: {} (raw ctx: {})&quot;, resolved, tenantId);&#10;        return resolved;&#10;    }&#10;&#10;    @Override&#10;    public boolean validateExistingCurrentSessions() {&#10;        return true;&#10;    }&#10;}" />
+            </PendingDiffInfo>
+          </value>
+        </entry>
+      </map>
+    </option>
+  </component>
+</project>

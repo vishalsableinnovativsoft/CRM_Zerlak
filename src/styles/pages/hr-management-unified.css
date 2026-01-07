@@ -1,0 +1,129 @@
+/**
+ * HR Management Page - Unified App UI Integration Styles
+ * Bridges the unified app system with the HR Management page structure
+ * Matches Job Openings visual design
+ */
+
+/* Scoped wrapper for unified styles on HR Management page */
+.hr-management-page.app-ui {
+  max-width: 100%;
+  padding: 0;
+  background: transparent;
+}
+
+/* Page Header - Full width with margin */
+.hr-management-page.app-ui .page-header {
+  margin: 20px 20px 0 20px;
+  padding: 16px 24px;
+  border-radius: 10px;
+}
+
+/* Filter Card - Full width with margin */
+.hr-management-page.app-ui .filter-card {
+  margin: 20px;
+}
+
+/* Table Card - Full width with margin */
+.hr-management-page.app-ui .table-card {
+  margin: 20px;
+}
+
+/* Responsive adjustments for existing layout */
+@media (max-width: 1023px) {
+  .hr-management-page.app-ui .page-header {
+    margin: 16px 16px 0 16px;
+    padding: 14px 20px;
+  }
+  
+  .hr-management-page.app-ui .filter-card,
+  .hr-management-page.app-ui .table-card {
+    margin: 16px;
+  }
+}
+
+@media (max-width: 767px) {
+  .hr-management-page.app-ui .page-header {
+    margin: 12px 12px 0 12px;
+    padding: 16px;
+    flex-direction: column;
+    align-items: stretch;
+  }
+  
+  .hr-management-page.app-ui .page-header-title {
+    text-align: center;
+    margin-bottom: 12px;
+  }
+  
+  .hr-management-page.app-ui .page-header-actions {
+    width: 100%;
+    justify-content: center;
+  }
+  
+  .hr-management-page.app-ui .btn-primary-cta {
+    width: 100%;
+  }
+  
+  .hr-management-page.app-ui .filter-card,
+  .hr-management-page.app-ui .table-card {
+    margin: 12px;
+  }
+}
+
+@media (max-width: 400px) {
+  .hr-management-page.app-ui .page-header {
+    margin: 8px 8px 0 8px;
+    padding: 12px;
+  }
+  
+  .hr-management-page.app-ui .filter-card,
+  .hr-management-page.app-ui .table-card {
+    margin: 8px;
+  }
+}
+
+/* Ensure proper spacing for content wrapper */
+.hr-management-page.app-ui {
+  padding-bottom: 24px;
+}
+
+/* Enhanced Action Buttons */
+.hr-management-page .unified-action-buttons {
+  display: flex;
+  flex-direction: row !important;
+  flex-wrap: nowrap !important;
+  align-items: center;
+  justify-content: flex-end;
+  gap: 8px;
+  width: fit-content;
+  margin-left: auto;
+}
+
+/* HR Candidate Count Button - Specific to HR Management */
+.hr-management-page .hr-candidate-count {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  min-width: 36px;
+  height: 28px;
+  padding: 0 10px;
+  background: #DBEAFE;
+  color: #1E40AF;
+  border: 1.5px solid #93C5FD;
+  border-radius: 6px;
+  font-size: 13px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+.hr-management-page .hr-candidate-count:hover {
+  background: #2563EB;
+  border-color: #2563EB;
+  color: white;
+  transform: translateY(-1px);
+  box-shadow: 0 4px 8px rgba(37, 99, 235, 0.3);
+}
+
+.hr-management-page .hr-candidate-count:active {
+  transform: translateY(0);
+}
